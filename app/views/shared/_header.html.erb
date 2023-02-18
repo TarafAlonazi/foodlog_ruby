@@ -1,0 +1,42 @@
+<section class="hero is-primary is-small">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <%= link_to root_path, class:"navbar-item" do %>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/0lEQVR4nO2Y34tNURTHP25EiBJKjeHe/Myb/AOSwvBAJApFKMbPhkEzRX40fgxe8Sq/MsZQPOCBEMmDPJjSyBPxIPJjCHO1au3ane7eZ7v3nDv34Xxq1d7tddbe33vO3mvtCxkZGRkZNcYEoAFoBJrVpL0AqKdGmQG0A2+AYoz1AMeB6dQA04AuoC9g4VGTZzqBqf2x8BzQAvwqY+FR+wns1ZhVYRhwK4GFR+2mxk598Y9SWHxR7WGaInIp/fLFEm8ilc+ppQqLL6rJnkj8tHFt2N9W+y3w0TEm9g74ELixpyQpoMsx0SdgOHBW++OB2dqWBDYxcsSOAkYH5ouOJJOU65x/oT67tT9IE5S0l+rYN8vfsCRAwN+kkt0JzySP1Wef9nP66qW9XMfsT8bmQYCIo0kI8L3uO+rTqm9JKOjYyhLP2ywKEPC60sXXx0xwXf3264Y1xZyMrdL+S4cAeVs9ASLqKhHQEBP8vPodBHq1Xadja7T/xCFAOBIgYF4lAhpjgp9Rv8O6WYVxOrZO+/c8AmYGCNhUiQCzOV0mJTS62b5oe4yOrdf+DY+AHPA1zaRmjkeXyaeDTtKt7cHAD2CZ9i94BBBQW8kaymZtTPA29RuoCc0wEhig7Y4YAedi5pA1lM3CmODPYgovqSzfxwg4FjPH/EoEjA24bbVrBo4ib+RKxPd/i8Q+LT0qojvgpOjRksMwJ1LU+QRs98R9RQK0BQgQ22I9c9rhU4pTnpiHkhBQ0MIqToDkDMPJQAGzgM8OX5kzT0LYJ4nLNgZsTJvVWve74l0mQfJ6tvsEmMzrKxFsnnti9epdIlGaYwTIL2o4ECDgqSdWEykgiemiZ9IVlm9rgAD5B6KUzzUrCSbOUOC+Y2JTOgh7AgTYRZ6xu9X4b2gIcLXE5Istn6YAAbcjY50auypI+bAD+G4tQG5Yhm0BAkyVKofD1jQ/Gx+TgEvAn8jFY3OAACkz5EI0mRqgELn6bQgQMIIaJq95YRewU+/Hc/t7URkZGRkZRPkHoCeCvcOdlW4AAAAASUVORK5CYII=">
+            <span class="has-textweight-bold is-size-4 ml-4">
+            Foodlog</span>
+          <% end %>
+          <span class="navbar-burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <span class="navbar-item">
+              <%= link_to "Create new entry", new_entry_path, class:"button is-success" %>
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        <% if content_for(:title) %>
+           <%= yield :title %>
+        <% else %>
+           foodlog
+        <% end %>
+      </h1>
+    </div>
+  </div>
+
+</section>
